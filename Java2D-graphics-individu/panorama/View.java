@@ -15,11 +15,23 @@ public class View extends Panel {
     }
     public void paint (Graphics g) {
         Graphics2D g2 = (Graphics2D) g;
-        GradientPaint skyBlue = new GradientPaint (0,200, Color.blue, 0, 0, Color.red);
+
+        //SkyBlue
+        GradientPaint skyBlue = new GradientPaint (0,300, Color.blue, 0, 0, Color.black);
         java.awt.geom.Rectangle2D.Double sky = new java.awt.geom.Rectangle2D.Double(0,0,800,300);
         g2.draw(sky);
         g2.setPaint(skyBlue);
         g2.fill(sky);
+
+        //Land
+        g2.setColor(new Color(0, 128, 0));
+        g2.fillRect(0, 200, 800, 200);
+
+        //Moon
+        g2.setColor(Color.yellow);
+        g2.fillOval(500, 30, 50, 50);
+        
+        
     }
 
 
